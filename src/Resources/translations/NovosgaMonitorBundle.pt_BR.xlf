@@ -64,7 +64,7 @@
       </trans-unit>
       <trans-unit id="14">
         <source>label.customer.id</source>
-        <target>Nome</target>
+        <target>Documento</target>
       </trans-unit>
       <trans-unit id="15">
         <source>label.yes</source>
