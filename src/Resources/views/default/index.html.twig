@@ -280,7 +280,9 @@
                                         {{ 'label.customer.name'|trans }}
                                     </th>
                                     <td>
-                                        
+                                        {% verbatim %}
+                                            {{atendimento.cliente?.nome}}
+                                        {% endverbatim %}
                                     </td>
                                 </tr>
                                 <tr>
