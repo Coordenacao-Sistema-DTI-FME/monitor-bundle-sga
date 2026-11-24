@@ -231,7 +231,9 @@
                                     </th>
                                     <td>
                                         {% verbatim %}
-                                            {{atendimento.tempoEspera}}
+                                            <span v-if="atendimento.tempoEspera && atendimento.servico.nome != 'Triagem' ">
+                                                {{atendimento.tempoEspera}}
+                                            </span>
                                         {% endverbatim %}
                                     </td>
                                 </tr>
@@ -251,7 +253,9 @@
                                     </th>
                                     <td>
                                         {% verbatim %}
-                                            {{atendimento.dataFim}}
+                                            <span v-if="atendimento.dataFim && atendimento.servico.nome != 'Triagem' ">
+                                                {{moment(atendimento.dataFim, 'YYYY-MM-DD HH:mm:ss').format(dateTimeFormat)}}
+                                            </span>
                                         {% endverbatim %}
                                     </td>
                                 </tr>
@@ -262,7 +266,7 @@
                                     <td>
                                         {% verbatim %}
                                             <span v-if="atendimento.servico && atendimento.servico.nome === 'Triagem'">
-                                                    encerrado
+                                                encerrado
                                             </span>
                                             <span v-else>
                                                 {{atendimento.status}}
