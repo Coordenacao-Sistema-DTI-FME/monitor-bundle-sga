@@ -153,11 +153,7 @@
                                                 {{atendimento.usuario?.login}}
                                             </td>
                                             <td>
-                                                {% if atendimento.servico.nome == "Triagem" %}
-                                                    <td>Triagem</td>
-                                                {% else %}
-                                                    {{atendimento.status}}
-                                                {% endif %}
+                                                {{atendimento.status}}
                                             </td>
                                         </tr>
                                     {% endverbatim %}
