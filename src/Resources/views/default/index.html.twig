@@ -254,7 +254,11 @@
                                     </th>
                                     <td>
                                         {% verbatim %}
-                                            {{atendimento.status}}
+                                            {% if atendimento.servico.nome == "Triagem" %}
+                                                <td>Triagem</td>
+                                            {% else %}
+                                                {{atendimento.status}}
+                                            {% endif %}
                                         {% endverbatim %}
                                     </td>
                                 </tr>

@@ -56,7 +56,7 @@
       </trans-unit>
       <trans-unit id="12">
         <source>label.customer</source>
-        <target>Cliente</target>
+        <target>Responsável</target>
       </trans-unit>
       <trans-unit id="13">
         <source>label.customer.name</source>
