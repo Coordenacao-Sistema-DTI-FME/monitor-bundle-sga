@@ -142,7 +142,7 @@
                                                 </span>
                                             </td>
                                             <td>
-                                                <span v-if="atendimento.dataFim">
+                                                <span v-if="atendimento.dataFim || atendimento.servico.nome != 'Triagem' ">
                                                     {{moment(atendimento.dataFim, 'YYYY-MM-DD HH:mm:ss').format(dateTimeFormat)}}
                                                 </span>
                                             </td>
