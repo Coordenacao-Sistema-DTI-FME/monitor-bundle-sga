@@ -150,11 +150,13 @@
                                                 {{atendimento.triagem?.login}}
                                             </td>
                                             <td>
-                                                {{atendimento.usuario?.login}}
+                                                <span v-if="atendimento.servico && atendimento.servico.nome != 'Triagem'">
+                                                    {{atendimento.usuario?.login}}
+                                                </span>
                                             </td>
                                             <td>
                                                 <span v-if="atendimento.servico && atendimento.servico.nome === 'Triagem'">
-                                                    Triagem
+                                                    encerrado
                                                 </span>
                                                 <span v-else>
                                                     {{atendimento.status}}
