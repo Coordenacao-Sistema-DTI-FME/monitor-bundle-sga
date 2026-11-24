@@ -153,7 +153,12 @@
                                                 {{atendimento.usuario?.login}}
                                             </td>
                                             <td>
-                                                {{atendimento.status}}
+                                                <span v-if="atendimento.servico && atendimento.servico.nome === 'Triagem'">
+                                                    Triagem
+                                                </span>
+                                                <span v-else>
+                                                    {{atendimento.status}}
+                                                </span>
                                             </td>
                                         </tr>
                                     {% endverbatim %}
