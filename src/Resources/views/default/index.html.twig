@@ -261,7 +261,12 @@
                                     </th>
                                     <td>
                                         {% verbatim %}
-                                            {{atendimento.status}}
+                                            <span v-if="atendimento.servico && atendimento.servico.nome === 'Triagem'">
+                                                    encerrado
+                                            </span>
+                                            <span v-else>
+                                                {{atendimento.status}}
+                                            </span>
                                         {% endverbatim %}
                                     </td>
                                 </tr>
